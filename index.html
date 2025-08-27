@@ -18,7 +18,7 @@
             color: var(--text);
             font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
             letter-spacing: .01em;
-            font-weight: normal; /* ✅ sin negrita por defecto */
+            font-weight: 400; /* Normal para todo el cuerpo */
         }
         header {
             background: var(--blue);
@@ -30,24 +30,24 @@
             font-size: 3rem;
             margin: 0 0 10px 0;
             font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-            font-weight: normal; /* ✅ sin negrita */
+            font-weight: 800; /* Aquí sí es negrita para título */
             letter-spacing: 2.5px;
         }
         header p {
             font-size: 1.5rem;
             margin: 0;
             color: #e3f2fd;
-            font-weight: normal; /* ✅ sin negrita */
+            font-weight: 500; /* semi negrita para el subtítulo */
         }
         main {
             max-width: 800px;
             margin: 36px auto;
             padding: 0 12px 60px 12px;
             background: none;
-            font-weight: normal;
+            font-weight: 400; /* Normal también para el contenido */
         }
         .num {
-            font-weight: normal; /* ✅ sin negrita */
+            font-weight: 600;
             font-size: 1em;
             color: var(--blue-light);
             margin-bottom: 8px;
@@ -68,22 +68,24 @@
             text-align: justify;
         }
         ul li, ol li {
+            /* Use ::before for custom bullet */
             text-indent: -1.5em;
             padding-left: 1.8em;
             position: relative;
             display: block;
+            font-weight: 400; /* Normal en items de listas */
         }
         ul li::before, ol li::before {
             content: "§";
             position: absolute;
             left: 0;
             color: var(--blue-light);
-            font-weight: normal; /* ✅ sin negrita en el símbolo */
+            font-weight: bold;
         }
         a {
             color: var(--blue);
             text-decoration: underline;
-            font-weight: normal; /* ✅ sin negrita en links */
+            font-weight: 400;
         }
         .info {
             background: var(--gray);
@@ -94,7 +96,7 @@
             display: block;
             margin-top: 10px;
             text-align: justify;
-            font-weight: normal; /* ✅ sin negrita */
+            font-weight: 400;
         }
         .creditos {
             background: #f4f8fd;
@@ -103,12 +105,12 @@
             padding: 14px 13px 10px 13px;
             font-size: 0.99rem;
             text-align: justify;
-            font-weight: normal;
+            font-weight: 400;
         }
         .email {
             color: #1769aa;
             text-decoration: underline;
-            font-weight: normal; /* ✅ sin negrita */
+            font-weight: bold;
         }
         @media (max-width: 800px) {
             main {
@@ -133,7 +135,7 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -141,7 +143,98 @@
         <p>Compra local, conecta con tu ciudad.</p>
     </header>
     <main>
-        <!-- contenido igual que tu original -->
+        <section class="seccion">
+            <div class="num">1. ¿Qué es Buy-Zy?</div>
+            <div>
+                Buy-Zy es una aplicación móvil que conecta a las personas con los productos ofrecidos por comercios y emprendedores de su ciudad. Con Buy-Zy, puedes:
+            </div>
+            <ul>
+                <li>Explorar productos ofrecidos por comercios y emprendedores locales.</li>
+                <li>Comparar precios y encontrar la mejor opción para tu bolsillo.</li>
+                <li>Consultar información como el nombre del negocio, precio y una imagen real.</li>
+                <li>Contactar directamente a los vendedores vía WhatsApp sin intermediarios ni comisiones.</li>
+            </ul>
+            <div>
+                Pero Buy-Zy es más que una app de compras. Su objetivo principal es impulsar el comercio local, especialmente a pequeños emprendedores sin visibilidad en grandes plataformas. Creemos en la oportunidad para todos y que los compradores tienen derecho a conocer opciones locales.
+                <br />
+                <span class="info">Buy-Zy es el puente entre quien vende y quien compra: rápido, directo y local.</span>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">2. ¿Qué información recopilamos?</div>
+            <div>
+                Buy-Zy no recopila, almacena ni solicita datos personales como nombre o ubicación en tiempo real. Solo recogemos:
+                <ul>
+                    <li>Tu ciudad para mostrarte productos locales. No se almacena ni comparte.</li>
+                </ul>
+                <div><strong>a. Información usada en la app:</strong></div>
+                <ul>
+                    <li>Consultas procesadas localmente sin almacenamiento en nube.</li>
+                    <li>Datos provienen de comercios registrados en Firebase Firestore.</li>
+                    <li>WhatsApp: el mensaje es generado y enviado directamente por el usuario.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">3. ¿Qué datos comparte Buy-Zy?</div>
+            <div>
+                No comparte ni vende datos de usuarios. Todo contacto es directo con el comercio por WhatsApp. Buy-Zy no tiene acceso a conversaciones ni datos personales.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">4. Servicios de terceros</div>
+            <div>
+                Buy-Zy utiliza:
+                <ul>
+                    <li>Firebase Firestore para productos y anuncios.</li>
+                    <li>WhatsApp para comunicación directa con comercios.</li>
+                </ul>
+                <div>Para detalles sobre privacidad consulta:</div>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener noreferrer">Privacidad Firebase</a></li>
+                    <li><a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacidad WhatsApp</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">5. Seguridad</div>
+            <div>
+                Buy-Zy no requiere autenticación ni almacena datos sensibles. Usa conexiones HTTPS para máxima seguridad.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">6. Cambios en esta política</div>
+            <div>
+                Podríamos actualizar esta política. Cambios importantes se anunciarán en la app o en esta página.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">7. Contacto</div>
+            <div>
+                Para preguntas o inquietudes, escríbenos a <a href="mailto:desarrolladorvip@gmail.com" class="email">desarrolladorvip@gmail.com</a>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="num">8. ¿Cómo usar Buy-Zy?</div>
+            <div>
+                <p>
+                    Abre la app y escribe la ciudad para explorar productos. Usa el buscador para filtrar por producto o comercio, compara precios y selecciona. Pulsa el botón de WhatsApp para contactar vendedor con tus productos seleccionados. Puedes enviar mensajes para varios comercios uno a la vez, pulsando nuevamente el botón cuando regreses a la app. El botón se desactiva automáticamente cuando ya no quedan mensajes.
+                </p>
+            </div>
+        </section>
+
+        <section class="creditos">
+            <strong>🎨 CREDITOS ICONOS</strong><br /><br />
+            Íconos de Buy-Zy modificados y combinados desde recursos gratuitos:
+            <a href="https://www.flaticon.es/gratis-iconos/comercio-electronico" target="_blank" rel="noopener noreferrer">Comercio electrónico</a> por gqadirbarejo, <a href="https://www.flaticon.es/gratis-iconos/carrito-de-compras" target="_blank" rel="noopener noreferrer">Carrito de compras</a> por Uniconlabs – Flaticon. Gracias a los autores y Flaticon por compartirlos con la comunidad.<br /><br />
+        </section>
     </main>
 </body>
 </html>
