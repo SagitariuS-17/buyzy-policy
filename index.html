@@ -51,12 +51,13 @@
             font-size: 1em;
             color: var(--blue-light);
             margin-bottom: 8px;
+            text-align: left; /* No justificar */
         }
         .seccion {
             margin-bottom: 36px;
         }
-        /* Justify main paragraphs and section content */
-        .seccion > div,
+        /* Justify main paragraphs and section content except titles */
+        .seccion > div:not(.num),
         .seccion > .info {
             text-align: justify;
         }
@@ -110,7 +111,12 @@
         .email {
             color: #1769aa;
             text-decoration: underline;
-            font-weight: bold;
+            font-weight: 400;
+        }
+        .introduccion {
+            margin-bottom: 36px;
+            font-weight: 400;
+            text-align: justify;
         }
         @media (max-width: 800px) {
             main {
@@ -143,6 +149,14 @@
         <p>Compra local, conecta con tu ciudad.</p>
     </header>
     <main>
+        <section class="introduccion">
+            <p>
+                Al descargar, instalar y/o utilizar la aplicación Buy-Zy, aceptas los presentes Términos y Condiciones, así como nuestra Política de Privacidad. Si no estás de acuerdo con alguno de los términos aquí expuestos, te recomendamos no utilizar la app.
+            </p>
+            <p>
+                El uso continuado de Buy-Zy implica tu consentimiento voluntario y explícito para la recolección y manejo de datos descritos en esta política, así como para las condiciones que regulan la interacción con los comercios y servicios relacionados.
+            </p>
+        </section>
         <section class="seccion">
             <div class="num">1. ¿Qué es Buy-Zy?</div>
             <div>
@@ -160,7 +174,6 @@
                 <span class="info">Buy-Zy es el puente entre quien vende y quien compra: rápido, directo y local.</span>
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">2. ¿Qué información recopilamos?</div>
             <div>
@@ -176,14 +189,12 @@
                 </ul>
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">3. ¿Qué datos comparte Buy-Zy?</div>
             <div>
                 No comparte ni vende datos de usuarios. Todo contacto es directo con el comercio por WhatsApp. Buy-Zy no tiene acceso a conversaciones ni datos personales.
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">4. Servicios de terceros</div>
             <div>
@@ -199,28 +210,24 @@
                 </ul>
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">5. Seguridad</div>
             <div>
                 Buy-Zy no requiere autenticación ni almacena datos sensibles. Usa conexiones HTTPS para máxima seguridad.
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">6. Cambios en esta política</div>
             <div>
                 Podríamos actualizar esta política. Cambios importantes se anunciarán en la app o en esta página.
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">7. Contacto</div>
             <div>
                 Para preguntas o inquietudes, escríbenos a <a href="mailto:desarrolladorvip@gmail.com" class="email">desarrolladorvip@gmail.com</a>
             </div>
         </section>
-
         <section class="seccion">
             <div class="num">8. ¿Cómo usar Buy-Zy?</div>
             <div>
@@ -229,7 +236,6 @@
                 </p>
             </div>
         </section>
-
         <section class="creditos">
             <strong>🎨 CREDITOS ICONOS</strong><br /><br />
             Íconos de Buy-Zy modificados y combinados desde recursos gratuitos:
