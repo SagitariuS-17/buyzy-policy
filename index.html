@@ -18,7 +18,7 @@
             color: var(--text);
             font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
             letter-spacing: .01em;
-            font-weight: 400; /* Normal para todo el cuerpo */
+            font-weight: 400;
         }
         header {
             background: var(--blue);
@@ -30,51 +30,43 @@
             font-size: 3rem;
             margin: 0 0 10px 0;
             font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-            font-weight: 800; /* Aquí sí es negrita para título */
+            font-weight: 800;
             letter-spacing: 2.5px;
         }
         header p {
             font-size: 1.5rem;
             margin: 0;
             color: #e3f2fd;
-            font-weight: 500; /* semi negrita para el subtítulo */
+            font-weight: 500;
         }
         main {
             max-width: 800px;
             margin: 36px auto;
             padding: 0 12px 60px 12px;
             background: none;
-            font-weight: 400; /* Normal también para el contenido */
+            font-weight: 400;
         }
         .num {
             font-weight: 600;
             font-size: 1em;
             color: var(--blue-light);
             margin-bottom: 8px;
-            text-align: left; /* No justificar */
+            text-align: left;
         }
         .seccion {
             margin-bottom: 36px;
         }
-        /* Justify main paragraphs and section content except titles */
-        .seccion > div:not(.num),
-        .seccion > .info {
-            text-align: justify;
-        }
-        /* Lists: justify text but preserve bullet alignment */
         ul, ol {
             margin: 10px 0 15px 28px;
             padding: 0;
             list-style: none;
-            text-align: justify;
         }
         ul li, ol li {
-            /* Use ::before for custom bullet */
             text-indent: -1.5em;
             padding-left: 1.8em;
             position: relative;
             display: block;
-            font-weight: 400; /* Normal en items de listas */
+            font-weight: 400;
         }
         ul li::before, ol li::before {
             content: "§";
@@ -96,7 +88,6 @@
             border-radius: 0 5px 5px 0;
             display: block;
             margin-top: 10px;
-            text-align: justify;
             font-weight: 400;
         }
         .creditos {
@@ -105,7 +96,6 @@
             border-radius: 10px;
             padding: 14px 13px 10px 13px;
             font-size: 0.99rem;
-            text-align: justify;
             font-weight: 400;
         }
         .email {
@@ -116,7 +106,6 @@
         .introduccion {
             margin-bottom: 36px;
             font-weight: 400;
-            text-align: justify;
         }
         @media (max-width: 800px) {
             main {
@@ -232,23 +221,30 @@
             <div class="num">8. ¿Cómo usar Buy-Zy?</div>
             <div>
                 <p>
-                  Abre la app y escribe la ciudad donde deseas explorar productos ofrecidos por comercios locales. Filtra por producto o comercio en el buscador, compara precios y selecciona la mejor opción. Al seleccionar productos, se activa el botón de WhatsApp para contactar directamente al vendedor directamente por WhatsApp para obtener más información o realizar pedidos, o si prefieres solicitar directamente domicilio por los productos seleccionados haz clic en el botón azul que es domicilio. Puedes seleccionar varios productos de diferentes comercios si lo deseas. Cuando estés listo, haz clic en el botón de WhatsApp para enviar el mensaje al primer comercio. Si tienes productos de otros vendedores, deberás regresar a la app y volver a hacer clic en el botón para enviar el siguiente mensaje (no es necesario volver a seleccionar). Cuando todos los mensajes han sido enviados, el botón se desactiva automáticamente y puedes salir de la app.
-<div class="num">9. Uso de servicios de domicilio</div>
-<div>Buy-Zy Express, es el servicio de domicilio oficial de la aplicación Buy-Zy para trabajar de la mano con los comercios para una entrega ágil, confiable, rápida, segura y sin complicaciones, conectamos tu pedido desde el comercio hasta tu puerta de tu casa. Compras en Buy-Zy, te entregamos con Buy-Zy Express, así de fácil.Buy-Zy Express, puede ser usado por usuarios y comercios para gestionar la entrega de productos. Sin embargo, la plataforma también permite que los usuarios o comercios coordinen directamente sus propios servicios de entrega o domiciliarios, si así lo prefieren.
-⚠️Importante: Cuando el servicio de domicilio no sea gestionado por Buy-Zy Express, Buy-Zy no se hace responsable por demoras, pérdidas, daños, atención al cliente ni calidad del servicio ofrecido por terceros. Toda la responsabilidad sobre el envío recae en el comercio y/o el usuario que decide contratar otro medio de entrega, Buy-Zy Express no asumen responsabilidades fuera de su propio sistema logístico.</div>
-<div class="num">10. 🎨 Créditos de iconos</div>
-<div>Los íconos utilizados en Buy-Zy han sido modificados y combinados a partir de los siguientes recursos gratuitos con atribución, proporcionados por Flaticon:
-•	Comercio electrónico iconos creados por gqadirbarejo – Flaticon
-•	Carrito de compras iconos creados por Uniconlabs – Flaticon
-Agradecemos a los autores por su trabajo y a Flaticon por ofrecer estos recursos para la comunidad.</div>
-
+                  Abre la app y escribe la ciudad donde deseas explorar productos ofrecidos por comercios locales. Filtra por producto o comercio en el buscador, compara precios y selecciona la mejor opción. Al seleccionar productos, se activa el botón de WhatsApp para contactar directamente al vendedor por WhatsApp para obtener más información o realizar pedidos. Si prefieres solicitar directamente domicilio por los productos seleccionados, haz clic en el botón azul que es domicilio. Puedes seleccionar varios productos de diferentes comercios si lo deseas. Cuando estés listo, haz clic en el botón de WhatsApp para enviar el mensaje al primer comercio. Si tienes productos de otros vendedores, deberás regresar a la app y volver a hacer clic en el botón para enviar el siguiente mensaje (no es necesario volver a seleccionar). Cuando todos los mensajes han sido enviados, el botón se desactiva automáticamente y puedes salir de la app.
                 </p>
+            </div>
+            <div class="num">9. Uso de servicios de domicilio</div>
+            <div>
+                Buy-Zy Express es el servicio de domicilio oficial de la aplicación Buy-Zy para trabajar de la mano con los comercios para una entrega ágil, confiable, rápida, segura y sin complicaciones. Conectamos tu pedido desde el comercio hasta tu puerta. Buy-Zy Express puede ser usado por usuarios y comercios para gestionar la entrega de productos. Sin embargo, la plataforma también permite que los usuarios o comercios coordinen directamente sus propios servicios de entrega si así lo prefieren.
+                <br><br>
+                ⚠️ <strong>Importante:</strong> Cuando el servicio de domicilio no sea gestionado por Buy-Zy Express, Buy-Zy no se hace responsable por demoras, pérdidas, daños, atención al cliente ni calidad del servicio ofrecido por terceros. Toda la responsabilidad sobre el envío recae en el comercio y/o el usuario que decide contratar otro medio de entrega. Buy-Zy Express no asume responsabilidades fuera de su propio sistema logístico.<br><br>
+            </div>
+            <div class="num">10. 🎨 Créditos de iconos</div>
+            <div>
+                Los íconos utilizados en Buy-Zy han sido modificados y combinados a partir de los siguientes recursos gratuitos con atribución, proporcionados por Flaticon:
+                <ul>
+                    <li>Comercio electrónico iconos creados por gqadirbarejo – Flaticon</li>
+                    <li>Carrito de compras iconos creados por Uniconlabs – Flaticon</li>
+                </ul>
+                Agradecemos a los autores por su trabajo y a Flaticon por ofrecer estos recursos para la comunidad.
             </div>
         </section>
         <section class="creditos">
-            <strong>🎨 CREDITOS ICONOS</strong><br /><br />
+            <strong>🎨 CREDITOS ICONOS</strong><br><br>
             Íconos de Buy-Zy modificados y combinados desde recursos gratuitos:
-            <a href="https://www.flaticon.es/gratis-iconos/comercio-electronico" target="_blank" rel="noopener noreferrer">Comercio electrónico</a> por gqadirbarejo, <a href="https://www.flaticon.es/gratis-iconos/carrito-de-compras" target="_blank" rel="noopener noreferrer">Carrito de compras</a> por Uniconlabs – Flaticon. Gracias a los autores y Flaticon por compartirlos con la comunidad.<br /><br />
+            <a href="https://www.flaticon.es/gratis-iconos/comercio-electronico" target="_blank" rel="noopener noreferrer">Comercio electrónico</a> por gqadirbarejo,
+            <a href="https://www.flaticon.es/gratis-iconos/carrito-de-compras" target="_blank" rel="noopener noreferrer">Carrito de compras</a> por Uniconlabs – Flaticon. Gracias a los autores y Flaticon por compartirlos con la comunidad.<br><br>
         </section>
     </main>
 </body>
